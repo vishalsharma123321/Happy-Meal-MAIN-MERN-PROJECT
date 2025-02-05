@@ -1,0 +1,17 @@
+State (useState):
+
+image: Stores the image file selected by the user for the product.
+data: Stores form data like the product's name, description, price, and category.
+Form Handling:
+
+onChangeHandler: A common handler for updating form inputs. It dynamically updates the data state based on the input field name (like name, price, etc.).
+onSubmitHandler: Collects all form data and sends it as a FormData object to the backend server using an HTTP POST request. The form submission is done asynchronously using axios.
+File Handling:
+
+The file input (image) is managed separately from the other form fields because file uploads need to be handled as FormData. The selected file is previewed using URL.createObjectURL.
+Axios Request:
+
+The form data is sent to the backend server using axios.post(). The server is expected to handle the image and other fields.
+Conditional Rendering:
+
+In the image preview section, if an image is selected, it is displayed using URL.createObjectURL(image). If no image is selected, a default image from the assets is shown.
