@@ -1,11 +1,10 @@
 import express from 'express';
 import cors from 'cors';
-import { connect } from 'mongoose';
 import { connectDB } from './config/db.js';
 import foodRouter from './routes/foodRoute.js';
 import userRouter from './routes/userRoute.js';
 import cartRouter from './routes/cartRoute.js';
-import orderRouter from './routes/oderRoute.js' //  // commented because the strip api is not working properly which may cause error .
+import orderRouter from './routes/oderRoute.js' 
 import dotenv from 'dotenv';
 
 
@@ -36,7 +35,7 @@ app.use('/api/user',userRouter)
 app.use('/api/cart',cartRouter)
 
 // api endpoint for order
-app.use('/api/order',orderRouter)   // commented because the strip api is not working properly which may cause error .
+app.use('/api/order',orderRouter)   
 
 // api for image 
 app.use('/images',express.static("uploads"))

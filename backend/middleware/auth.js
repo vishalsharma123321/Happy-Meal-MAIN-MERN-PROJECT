@@ -1,7 +1,7 @@
 import JWT from 'jsonwebtoken';
 
-const authMiddelware = async (req, res, next) => {
-    const authHeader = req.headers.authorization;  // Updated to use 'authorization' key
+const authMiddleware = async (req, res, next) => {
+    const authHeader = req.headers.authorization;  
     if (!authHeader || !authHeader.startsWith('Bearer ')) {
         return res.send({
             success: false,
@@ -24,4 +24,4 @@ const authMiddelware = async (req, res, next) => {
     }
 };
 
-export default authMiddelware;
+export default authMiddleware;
