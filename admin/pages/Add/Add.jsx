@@ -8,7 +8,8 @@ import { toast } from 'react-toastify';
 
 const Add = () => {
 
-    const url = "http://localhost:4000"; // Backend server URL (local API endpoint)
+//    const url = "http://localhost:4000"; // Backend server URL (local API endpoint)
+  const url = "https://happy-meal-back-end.onrender.com"
 
     // State to manage the selected image file (initially null, since no image is selected)
     const [image, setImage] = useState(null); 
